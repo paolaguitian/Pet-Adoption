@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import { Router, Link } from "@reach/router";
 import Details from "./Details";
-import SearchParams from "./SearchParams";
+import Search from "./search";
 import ThemeContext from "./ThemeContext";
 
 const App = () => {
@@ -16,13 +16,12 @@ const App = () => {
             <Link to="/">Adopt Me!</Link>
           </header>
           <Router>
-            <SearchParams path="/" />
+            <Search path="/" />
             <Details path="/details/:id" />
           </Router>
         </div>
       </ThemeContext.Provider>
-    </React.StrictMode>
-
+    </React.StrictMode >
   );
 };
 

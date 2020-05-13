@@ -4,7 +4,7 @@ import useDropdown from './useDropdown';
 import Results from "./Results";
 import ThemeContext from './ThemeContext';
 
-const SearchParams = () => {
+const Search = () => {
   const [breeds, updateBreeds] = useState([])
   const [AnimalDropdown, animal] = useDropdown("Animal", "dog", ANIMALS);
   const [BreedDropdown, breed, setBreed] = useDropdown("Breed", "", breeds);
@@ -61,9 +61,6 @@ const SearchParams = () => {
       </form>
       <Results pets={pets} />
     </div>
-  );
-};
-
-export default SearchParams
-
-
+  )
+}
+export default Search;

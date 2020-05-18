@@ -1,5 +1,4 @@
 import React, { useState, lazy, Suspense } from "react";
-import ReactDOM from "react-dom";
 import { Router, Link } from "@reach/router";
 import Search from "./search";
 import ThemeContext from "./ThemeContext";
@@ -28,4 +27,4 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById("root"));
+export default App;

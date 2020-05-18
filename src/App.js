@@ -1,11 +1,11 @@
-import React, { useState, lazy, Suspense } from "react";
+import React, { useState, lazy, } from "react";
 import { Router, Link } from "@reach/router";
 import Search from "./search";
+import Details from './Details';
 import ThemeContext from "./ThemeContext";
 
 const App = () => {
   const themeHook = useState('darkblue');
-  const Details = lazy(() => import('./Details'));
 
   return (
     <React.StrictMode>
@@ -14,13 +14,10 @@ const App = () => {
           <header>
             <Link to="/">Adopt Me!</Link>
           </header>
-          <Suspense fallback={<h1>loading route...</h1>}>
-            <Router>
-              <Search path="/" />
-              <Details path="/details/:id" />
-            </Router>
-          </Suspense>
-
+          <Router>
+            <Search path="/" />
+            <Details path="/details/:id" />
+          </Router>
         </div>
       </ThemeContext.Provider>
     </React.StrictMode >
